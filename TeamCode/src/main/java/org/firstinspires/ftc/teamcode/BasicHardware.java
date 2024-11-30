@@ -47,5 +47,20 @@ public class BasicHardware {
         LR.setPower(lr);
         RF.setPower(rf);
         RR.setPower(rr);
+        hwOpMode.telemetry.addLine("robot moves");
+    }
+
+    public void stopp() {
+        LF.setPower(0);
+        LR.setPower(0);
+        RF.setPower(0);
+        RR.setPower(0);
+    }
+
+    public void moveByTime(double x, double y, int milliseconds) {
+        setControlInput(x, y);
+        move();
+        hwOpMode.sleep(milliseconds);
+        stopp();
     }
 }
