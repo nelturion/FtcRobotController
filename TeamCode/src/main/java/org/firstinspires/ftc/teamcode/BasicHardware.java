@@ -25,6 +25,12 @@ public class BasicHardware {
         RF.setDirection(DcMotorSimple.Direction.FORWARD);
         RR.setDirection(DcMotorSimple.Direction.FORWARD);
 
+        LF = hwOpMode.hardwareMap.dcMotor.get("lf");
+        LR = hwOpMode.hardwareMap.dcMotor.get("lr");
+        RF = hwOpMode.hardwareMap.dcMotor.get("rf");
+        RR = hwOpMode.hardwareMap.dcMotor.get("rr");
+        //RR = hwOpMode.hardwareMap.get(DcMotor.class, "rr");
+
         opMode.telemetry.addLine("inited");
     }
 
