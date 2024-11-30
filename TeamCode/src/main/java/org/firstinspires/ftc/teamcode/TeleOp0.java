@@ -5,14 +5,15 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp(name = "Basic DT")
 public class TeleOp0 extends LinearOpMode {
+    //define
     private BasicHardware hw = new BasicHardware(this);
 
     @Override
-    public void runOpMode() throws InterruptedException{
+    public void runOpMode() throws InterruptedException {
         hw.init(this);
 
         waitForStart();
-        while(opModeIsActive()) {
+        while (opModeIsActive()) {
             hw.getControlInput();
             hw.move();
 

@@ -32,6 +32,10 @@ public class BasicHardware {
         double x = hwOpMode.gamepad1.left_stick_x;
         double y = hwOpMode.gamepad1.left_stick_y;
 
+        setControlInput(x, y);
+    }
+
+    private void setControlInput(double x, double y) {
         lf = x + y;
         lr = -x + y;
         rf = x - y;
